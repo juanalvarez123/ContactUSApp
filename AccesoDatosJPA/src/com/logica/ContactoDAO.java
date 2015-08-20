@@ -1,29 +1,27 @@
 package com.logica;
 
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-
-import com.modelo.PersonaEntity;
-
-import java.util.*;
+import com.modelo.ContactoEntity;
 
 @Stateless
-public class PersonaDAO implements IPersonaDAO {
+public class ContactoDAO implements IContactoDAO {
 	
 	@PersistenceContext(unitName = "AccesoDatosJPA")
 	private EntityManager em;
 	
-	@Override
 	@SuppressWarnings("unchecked")
-	public List<PersonaEntity> consultarPersonas() {
-		return (List<PersonaEntity>) em.createNamedQuery("PersonaEntity.findAll").getResultList();
+	@Override
+	public List<ContactoEntity> consultarContactos() {
+		return (List<ContactoEntity>) em.createNamedQuery("ContactoEntity.findAll").getResultList();
 	}
 	
 	@Override
-	public boolean registrarPersona(PersonaEntity persona) {
+	public boolean registrarContacto(ContactoEntity contacto) {
 		try {
-			em.persist(persona);
+			em.persist(contacto);
 			return true;
 		} catch (Exception ex) {
 			return false;

@@ -45,4 +45,37 @@ public class WsContactUs {
 		return String.valueOf(respuesta);
 	}
 	
+	//Bloque de código a utilizar si se utiliza la referencia al proyecto AccesoDatosJPA
+	/*
+	@EJB
+	private IMedioDAO medioDAO;
+	
+	@EJB
+	private IContactoDAO contactoDAO;
+	
+	@GET
+	@Path("consultarMedios/{estado}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<MedioEntity> consultarMedios(@PathParam("estado") int estado) {
+		List<MedioEntity> lstMedios = medioDAO.consultarMedios(new MedioEntity(null, null, estado));
+		return lstMedios;
+	}
+	
+	@GET
+	@Path("consultarContactos")
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<ContactoEntity> consultarContactos() {
+		List<ContactoEntity> lstContactos = contactoDAO.consultarContactos();
+		return lstContactos;
+	}
+	
+	@POST
+	@Path("registrarContacto")
+	@Produces(MediaType.APPLICATION_JSON)
+	public String registrarContacto(ContactoEntity contacto) {
+		boolean respuesta = contactoDAO.registrarContacto(contacto);
+		return String.valueOf(respuesta);
+	}
+	*/
+	
 }
