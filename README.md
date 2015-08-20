@@ -3,7 +3,9 @@
 Java, AngularJS and Polymer Application
 
 ContactUsApp es una aplicación desarrollada en tecnologías Java, AngularJS y Polymer para el registro de un formulario de contacto y una pantalla donde lista las solicitudes realizadas.
+
 Los proyectos descritos a continuación:
+
 -	AccesoDatosJDBC: Proyecto construido con el API JDBC de Java. Realiza la conexión a una base de datos Oracle XE 11.2. Utiliza el llamado a procedimientos almacenados para consultar y registrar la información.
 
 -	AccesoDatosJPA: Proyecto construido con EclipseLink que utiliza la API JPA de Java. Realiza la conexión a la misma base de datos Oracle XE 11.2. Para registrar y consultar información hace uso de las herramientas del API como “persist” o “createNamedQuery”.
@@ -18,6 +20,7 @@ Para la publicación del servicio y la aplicación web se utilizaron los siguien
 -	Python: Para la aplicación ContactUsAppAJS.
 
 NOTAS IMPORTANTES:
+
 1.	Tanto el proyecto AccesoDatosJDBC como AccesoDatosJPA realizan las mismas tareas: registrar y consultar información en la base de datos. Es decir, El proyecto WS puede hacer la referencia a uno o al otro y el sistema funcionará de la misma manera.
 
 2.	El servidor Apache Tomcat 8.0 usa librería de conexión a bases de datos Oracle. Para esto, es necesario que en la carpeta lib/ de nuestro servidor se encuentre el archivo ojdbc7.jar (Se encuentra en la capeta lib/ del repositorio).
