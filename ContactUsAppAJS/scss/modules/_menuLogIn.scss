@@ -1,0 +1,35 @@
+.logInMenu {background:$color-logIn-Bar; font-size:12px;
+	.navbar-nav > li { padding:7px 0;
+		> a { padding:0 10px; color:$color-white;}
+		> a:hover { color:$color-logIn-aHover; background:none;}
+		> a.borderRight {border-right:1px solid $color-logIn-darkGray;} 
+		> a.borderLeft {border-left:1px solid $color-logIn-lightGray;}
+		> a > span { margin-right:5px; color:$color-blue;}					
+		> .dropdown-menu { background:$color-logIn-darkGray; font-size:12px; padding:0;
+			> li > a {color:$color-white;padding:7px 10px;}
+			> li > a:hover { background:none;color:$color-logIn-aHover; }
+			.divider { margin:1px 0 0; background:$color-logIn-lightGray;}
+		}
+	}
+	.navbar-nav > li.international { background:$color-logIn-destacado;
+		a > span { margin-right:0; margin-left:5px;}
+	}
+	.navbar-nav > li.active > a, .navbar-nav > li.active > a:focus, .navbar-nav > li.active > a:hover{color:$color-logIn-destacado;}
+	.nav .open > a, .nav .open > a:focus, .nav .open > a:hover, .nav > li > a:focus, .nav > li > a:hover { background:none; color:$color-logIn-aHover;}
+	.nav-Lang, .nav-logIn { float:right;}
+}
+
+@media (max-width:767px) {
+	.logInMenu {
+		.nav > li { float:left;}
+		.navbar-nav {margin: 0 -15px;
+			> li.international { padding:7px 0 0;
+				a { padding-bottom:7px;}
+			}
+			.dropdown-menu {@include noRounded;}
+			.dropdown-menu .divider { margin:2px 0 0;}	
+		}		
+	}
+	.nav-logIn {float:left !important;}
+}
+

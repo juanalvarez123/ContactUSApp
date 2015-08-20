@@ -1,0 +1,30 @@
+.btn-primary { 
+	font-size:15px;
+	background: $color-green-light; /* Old browsers */
+	background: -moz-linear-gradient(top, $color-green-light 1%, $color-green 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,$color-green-light), color-stop(100%,$color-green)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, $color-green-light 1%,$color-green 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, $color-green-light 1%,$color-green 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, $color-green-light 1%,$color-green 100%); /* IE10+ */
+	background: linear-gradient(to bottom, $color-green-light 1%,$color-green 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-green-light', endColorstr='$color-green',GradientType=0 ); /* IE6-9 */
+	border:1px solid $color-white;
+	@include shadow;
+}
+.btn-primary:hover { border:1px solid $color-green;}
+
+.btn-default {
+    background: $color-blue; /* Old browsers */
+	background: -moz-linear-gradient(top, $color-blue 1%, $color-blue-middle 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,$color-blue), color-stop(100%,$color-blue-middle)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, $color-blue 1%,$color-blue-middle 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, $color-blue 1%,$color-blue-middle 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, $color-blue 1%,$color-blue-middle 100%); /* IE10+ */
+	background: linear-gradient(to bottom, $color-blue 1%,$color-blue-middle 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-blue', endColorstr='$color-blue-middle',GradientType=0 ); /* IE6-9 */;
+    border-color: $color-white;
+    color: $color-white;
+	@include shadow;
+	span { margin-left:3px;}
+}
+.btn-default:hover { border:1px solid $color-blue; color: $color-white;}

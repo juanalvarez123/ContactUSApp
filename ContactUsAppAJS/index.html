@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<base href="/">
+		<script src="../bower_components/webcomponentsjs/webcomponents.min.js"></script>
+		<link rel="import" href="elements/elements.html">
+
+		<!-- AngularJS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-route.js"></script>
+		<script src="../js/app.js"></script>
+
+		<style type="text/css">
+
+			paper-header-panel {
+				background: #E8F5E9;
+				color: #FFF;
+				height: 100%;
+			}
+
+			paper-toolbar.my-paper-toolbar {
+				background: #2E7D32;
+				color: #FFF;
+				height: 15%;
+
+			}
+
+			.paper-button {
+				background: #388E3C;
+				color: #FFF;
+				margin: 10px;
+			}
+
+			paper-card{
+				background: #81C784;
+				color: #000;
+				margin: 10px;
+			}
+
+		</style>
+	</head>
+	<body class="fullbleed layout vertical" ng-app="myApp" ng-init="names={}">
+		<paper-header-panel class="flex" ng-controller="listController">
+		  <paper-toolbar class="my-paper-toolbar"><h1>Contactos</h1></paper-toolbar>
+		  <div class="layout vertical">
+			<!--<my-card-list contacts="{{names}}" class="layout vertical">
+			</my-card-list>-->
+			<my-card-list contacts="{{lstContactos}}" class="layout vertical"></my-card-list>
+			<div>
+				<paper-button id="btn" raised ng-click="go('/contact')">
+					<paper-ripple></paper-ripple>
+					Regresar
+				</paper-button>	
+				<paper-tooltip for="btn">Tooltip text</paper-tooltip>
+			</div>
+		  </div>
+		</paper-header-panel>
+	</body>
+</html>

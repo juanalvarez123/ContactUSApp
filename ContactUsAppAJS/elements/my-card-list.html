@@ -1,0 +1,42 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+
+<dom-module id="my-card-list">
+ <style>
+   my-card-list h1{
+   	color: #000;
+    font-family: cursive;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+   }
+  </style>
+ <template> 
+ 	<template is="dom-repeat" items="{{contacts}}" as="contact">
+    <paper-card heading="{{contact.nombreCompleto}}" elevation="5">
+      <div class="card-content">
+      <ul>
+        <li><strong>Country: </strong>{{contact.pais}}</li>
+        <li><strong>E-mail: </strong>{{contact.email}}</li>
+        <li><strong>Telephone: </strong>{{contact.telefono}}</li>
+        <li><strong>Website: </strong>{{contact.url}}</li>
+        <li><strong>Where did you hear about us: </strong>{{contact.medio.descripcion}}</li>
+        <li><strong>Comments: </strong>{{contact.comentarios}}</li>
+      </ul>
+      </div>
+    </paper-card>
+ 	</template>
+ </template>
+</dom-module>
+<script>
+  Polymer({
+    is: "my-card-list",
+    properties: {
+      contacts: {
+        type: Object,
+        notify: true,
+        value: function() {
+        return {};
+        }
+      }
+    },
+  });
+ </script>

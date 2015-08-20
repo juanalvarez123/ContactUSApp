@@ -1,0 +1,40 @@
+footer {background:url("../img/bg-footer2.png"); font-size:9px; text-transform:uppercase; color:$color-white;
+	.container{ padding:15px 0;}
+	.menuFooter { background:url("../img/bg-footer1.png"); padding:7px 0; @include shadow; font-size:12px; text-transform:none; 
+		.container {padding:0;}
+		a { color:$color-logIn-aHover;}
+		.navbar-nav { margin:5px 5px;
+			> li {
+				> a { padding:0 10px;}
+				> a:hover { background:none; color:$color-white;}
+				> a:visited { color:$color-logIn-aHover;}
+				> a.borderRight {border-right:1px solid $color-logIn-darkGray;} 
+				> a.borderLeft {border-left:1px solid $color-logIn-lightGray;}
+			}
+		}
+	}
+	a {color:$color-blue;}
+	a:hover, a:focus {color:$color-blue-light; text-decoration:none;}
+	a:visited { color:$color-logIn-lightGray;}
+	figure { margin:0; padding:7px 0;}
+	.nav > li > a:focus, .nav > li > a:hover { background:none; color:$color-white;}
+}
+@media (max-width: 767px) {
+	footer {
+		.menuFooter {
+			.navbar-nav {
+				> li {
+					> a {
+						padding:5px;
+						text-align:center;
+					}
+					> a.borderRight {border:none;}
+					> a.borderLeft {border:none;}
+				}
+			}
+		}
+		.logoFooter { text-align:center;}
+		figure { text-align:center; padding:5px 0;}
+		.pci { padding-top:15px;}
+	} 
+}

@@ -1,0 +1,21 @@
+body { font-family: 'Exo 2', sans-serif; color:$color-text;}
+.myTitle { 
+	background: $color-white; /* Old browsers */
+	background: -moz-linear-gradient(top, $color-white 0%, $color-header-bg 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color-white), color-stop(100%,$color-header-bg)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, $color-white 0%,$color-header-bg 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, $color-white 0%,$color-header-bg 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, $color-white 0%,$color-header-bg 100%); /* IE10+ */
+	background: linear-gradient(to bottom, $color-white 0%,$color-header-bg 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-white', endColorstr='$color-header-bg',GradientType=0 ); /* IE6-9 */
+	border-bottom:1px solid $color-border-header;
+	.containerTitle { text-align:center; color:$color-dark-blue; text-transform:uppercase; background:url("../img/bg-menu.png")50% 0 no-repeat; padding:20px;
+		h1 { margin:0;}
+	}
+}
+.fixForm { float:left; width:100%;}
+.content {background:url("../img/bg-menu.png")50% 0 no-repeat; padding:40px 0 20px;}
+
+@media (max-width:767px) {
+	.content {background:none; padding:20px 0;}
+}

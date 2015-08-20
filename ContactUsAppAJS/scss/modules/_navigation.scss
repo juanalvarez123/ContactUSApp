@@ -1,0 +1,47 @@
+.navigation { padding:20px 0;
+	.logo { width:100%; padding:0;
+		figure { margin:0;}
+		figure img { max-width:80%;}
+	}
+	.navbar-brand {padding:0;float:none;
+		figure { margin:0;}
+		figure img {}
+	}
+	.navbar-collapse { padding:0;}
+	.navbar-nav  { font-size:16px;
+		> li { padding:15px 0;
+			> a { padding:0 15px 2px; border-right:1px solid $color-blue-light; color:$color-logIn-Bar; line-height:21px;}
+			> a:hover { color:$color-black; background:none;}
+		}
+	}
+	.btn-primary { margin-top:8px;}
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+	.navbar-brand figure img { max-width:20%;}
+	.navbar-nav > li > a {padding:0 10px 2px !important;}
+}
+
+@media (max-width:767px) {	
+	.navigation {padding:15px 0 0; border-bottom:1px solid $color-white;
+		.navbar-toggle { margin-bottom:2px; margin-top:2px; @include noRounded; margin-right:0; padding:9px 0;
+			.icon-bar { background:$color-green-light;}
+		}
+		.navbar-toggle:hover .icon-bar{background:$color-green-light-hover;}
+		.navbar-collapse { float:left; width:100%; margin:0;}
+		.navbar-nav {  margin: 0; border-top:1px solid $color-border-header;
+			> li { padding:0;}
+			> li > a { border-right:none; border-bottom:1px solid $color-border-header; padding:15px; background:$color-header-bg;}
+			> li > a:focus, > li > a:hover { background:$color-border-header;}
+		}
+		.navbar-header { margin-bottom:10px;}
+	}
+}
+
+@media (min-width:481px) and (max-width:767px) {
+	.navbar-brand figure img { max-width:15%;}
+}
+
+@media (min-width:200px) and (max-width:480px) {
+	.navbar-brand figure img { max-width:30%;}
+}
