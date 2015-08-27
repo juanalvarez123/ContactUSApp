@@ -4,30 +4,41 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class Conexion {
-	
-	private static final String URL = "jdbc:oracle:thin:@localhost:1521:xe";
-	private static final String USER = "pruebas";
-	private static final String PASSWORD = "pruebas";
-	private static final String DBDRIVER = "oracle.jdbc.OracleDriver";
-	
+
+	private static String DBDRIVER = "";
+
+	private static BaseDeDatos bd;
+
 	static {
 		try {
+			Propiedades prop = new Propiedades();
+			DBDRIVER = prop.obtenerValor("base.datos.driver");
+			String nombreBD = prop.obtenerValor("base.datos");
+			if(nombreBD.equals(BaseDeDatos.ORACLE.toString())) {
+				bd = BaseDeDatos.ORACLE;
+			} else if (nombreBD.equals(BaseDeDatos.POSTGRESQL.toString())) {
+				bd = BaseDeDatos.POSTGRESQL;
+			}
 		    Class.forName(DBDRIVER).newInstance();
 		} catch (Exception e){
 		    e.printStackTrace();
 		}
 	}
-	
-	public static Connection obtenerConexion() 
+
+	public static Connection obtenerConexion()
 	{
 		Connection connection = null;
 		try {
-		    connection = DriverManager.getConnection(URL, USER, PASSWORD);
+		    connection = DriverManager.getConnection(bd.URL(), bd.USER(), bd.PASSWORD());
 		}
 		catch (Exception e) {
 		    e.printStackTrace();
 		}
 		return connection;
+	}
+
+	public static BaseDeDatos obtenerBaseDeDatos() {
+		return bd;
 	}
 
 }

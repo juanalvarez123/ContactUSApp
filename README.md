@@ -6,7 +6,7 @@ ContactUsApp es una aplicación desarrollada en tecnologías Java, AngularJS y P
 
 Los proyectos descritos a continuación:
 
--	AccesoDatosJDBC: Proyecto construido con el API JDBC de Java. Realiza la conexión a una base de datos Oracle XE 11.2. Utiliza el llamado a procedimientos almacenados para consultar y registrar la información.
+-	AccesoDatosJDBC: Proyecto construido con el API JDBC de Java. Realiza la conexión a una base de datos Oracle XE 11.2 o Postgres, dependiendo de la necesidad. Utiliza el llamado a procedimientos almacenados para consultar y registrar la información.
 
 -	AccesoDatosJPA: Proyecto construido con EclipseLink que utiliza la API JPA de Java. Realiza la conexión a la misma base de datos Oracle XE 11.2. Para registrar y consultar información hace uso de las herramientas del API como “persist” o “createNamedQuery”.
 
@@ -23,13 +23,15 @@ NOTAS IMPORTANTES:
 
 1.	Tanto el proyecto AccesoDatosJDBC como AccesoDatosJPA realizan las mismas tareas: registrar y consultar información en la base de datos. Es decir, El proyecto WS puede hacer la referencia a uno o al otro y el sistema funcionará de la misma manera.
 
-2.	El servidor Apache Tomcat 8.0 usa librería de conexión a bases de datos Oracle. Para esto, es necesario que en la carpeta lib/ de nuestro servidor se encuentre el archivo ojdbc7.jar (Se encuentra en la capeta lib/ del repositorio).
+2. El proyecto AccesoDatosJDBC utiliza un archivo .properties y una clase .enum para determinar la conexión a la base de datos que se va a utilizar, es decir, si queremos cambiar la conexión de base de datos necesitamos modificar estos 2 archivos: propiedades.properties y BaseDeDatos.java.
 
-3.	Para evitar el error “Access-Control-Allow-Origin” al consumir un servicio desde una aplicación que se encuentran en diferentes hosts es necesario que en la carpeta lib/ de nuestro servidor se encuentren los archivos cors-filter-2.4.jar y java-property-utils-1.9.1.jar (Se encuentran en la carpeta lib/ del repositorio).
+3.	El servidor Apache Tomcat 8.0 utiliza las librerías de conexión a bases de datos Oracle y PostgreSQL. Para esto, es necesario que en la carpeta lib/ de nuestro servidor se encuentre el archivo ojdbc7.jar y postgresql-9.4-1201.jdbc4.jar (Se encuentran en la capeta lib/ del repositorio).
 
-4.	Descargar Apache Tomcat: http://tomcat.apache.org/download-80.cgi 
+4.	Para evitar el error “Access-Control-Allow-Origin” al consumir un servicio desde una aplicación que se encuentran en diferentes hosts es necesario que en la carpeta lib/ de nuestro servidor se encuentren las librerias cors-filter-2.4.jar y java-property-utils-1.9.1.jar (Se encuentran en la carpeta lib/ del repositorio).
 
-5.	Descargar Phyton: https://www.python.org/downloads/release/python-2710/ 
+5.	Descargar Apache Tomcat: http://tomcat.apache.org/download-80.cgi 
+
+6.	Descargar Phyton: https://www.python.org/downloads/release/python-2710/ 
 
 MAS INFORMACIÓN: https://docs.google.com/document/d/1agyu3JghYeTZeLUReulo8nVoyLUXZvun8zazw_OMxpY/edit?usp=sharing 
 
