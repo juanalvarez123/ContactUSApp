@@ -47,3 +47,6 @@ libraries/
 RemoteSystemsTempFiles/
 Servers/
 .gitignore
+*.class
+AccesoDatosJDBC/build/*
+AccesoDatosJPA/build/*
