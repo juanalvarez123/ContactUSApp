@@ -9,7 +9,7 @@
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
    }
   </style>
- <template> 
+ <template>
  	<template is="dom-repeat" items="{{contacts}}" as="contact">
     <paper-card heading="{{contact.nombreCompleto}}" elevation="5">
       <div class="card-content">
@@ -20,6 +20,7 @@
         <li><strong>Website: </strong>{{contact.url}}</li>
         <li><strong>Where did you hear about us: </strong>{{contact.medio.descripcion}}</li>
         <li><strong>Comments: </strong>{{contact.comentarios}}</li>
+        <li><strong>Date: </strong>{{contact.fechaRegistroString}}</li>
       </ul>
       </div>
     </paper-card>
