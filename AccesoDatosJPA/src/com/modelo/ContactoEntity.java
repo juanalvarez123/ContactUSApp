@@ -1,13 +1,14 @@
 package com.modelo;
 
 import java.io.Serializable;
+import java.util.Date;
+
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 
-
 /**
  * The persistent class for the CONTACTO database table.
- * 
+ *
  */
 @XmlRootElement
 @Entity
@@ -35,6 +36,8 @@ public class ContactoEntity implements Serializable {
 	private String telefono;
 
 	private String url;
+
+	private Date fechaRegistro;
 
 	//bi-directional many-to-one association to Medio
 	@ManyToOne(fetch=FetchType.LAZY)
@@ -122,6 +125,14 @@ public class ContactoEntity implements Serializable {
 
 	public void setMedio(MedioEntity medio) {
 		this.medio = medio;
+	}
+
+	public void setFechaRegistro(Date fechaRegistro) {
+		this.fechaRegistro = fechaRegistro;
+	}
+
+	public Date getFechaRegistro() {
+		return this.fechaRegistro;
 	}
 
 }
