@@ -1,10 +1,12 @@
 package com.modelo;
 
+import java.util.Date;
+
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class Contacto {
-	
+
 	public Integer idContacto;
 	public String nombres;
 	public String apellidos;
@@ -15,6 +17,8 @@ public class Contacto {
 	public Medio medio;
 	public String comentarios;
 	public String respuesta;
+	public Date fechaRegistro;
 	public String nombreCompleto;
+	public String fechaRegistroString;
 
 }
