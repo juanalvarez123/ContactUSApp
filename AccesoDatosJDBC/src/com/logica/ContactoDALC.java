@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -55,6 +56,9 @@ public class ContactoDALC {
 					contacto.medio = new Medio(rs.getInt("ID_MEDIO"), rs.getString("DESCRIPCION_MEDIO").trim(), null);
 					contacto.comentarios = rs.getString("COMENTARIOS").trim();
 					contacto.respuesta = rs.getString("RESPUESTA") != null ? rs.getString("RESPUESTA").trim() : "";
+					contacto.fechaRegistro = rs.getDate("FECHA_REGISTRO");
+					SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+					contacto.fechaRegistroString = sdf.format(rs.getDate("FECHA_REGISTRO"));
 					contacto.nombreCompleto = contacto.nombres + " " + contacto.apellidos;
 					lstContactos.add(contacto);
 				}
