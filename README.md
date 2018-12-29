@@ -1,4 +1,4 @@
-# ContactUsApp
+# Contact Us application
 
 Java, AngularJS and Polymer Application
 
@@ -32,8 +32,3 @@ NOTAS IMPORTANTES:
 5.	Descargar Apache Tomcat: http://tomcat.apache.org/download-80.cgi 
 
 6.	Descargar Phyton: https://www.python.org/downloads/release/python-2710/ 
-
-MAS INFORMACIÓN: https://docs.google.com/document/d/1agyu3JghYeTZeLUReulo8nVoyLUXZvun8zazw_OMxpY/edit?usp=sharing 
-
-© Transport Systems - 2015
-Desarrollado por Juan Sebastian Alvarez Eraso y Víctor Manuel Maldonado
